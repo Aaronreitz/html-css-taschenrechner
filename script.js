@@ -10,7 +10,7 @@ function press(num) {
 }
 
 // Funktion 'calculate', die aufgerufen wird, wenn der Gleichheitszeichen-Button gedrückt wird
-function fotzensohn() {
+function calculate() {
     // Auswertung der 'expression' und Anzeige des Ergebnisses im Display
     document.getElementById('display').value = eval(expression);
     // Setzt die 'expression' zurück, um eine neue Berechnung zu beginnen
@@ -30,7 +30,7 @@ window.onload = function() {
     // Zuweisen von Funktionen zu den entsprechenden Buttons
     document.querySelectorAll('.buttons button').forEach(function(button) {
         if (button.innerText === '=') {
-            button.onclick = fotzensohn; // Zuweisen der 'calculate'-Funktion
+            button.onclick = calculate; // Zuweisen der 'calculate'-Funktion
         } else if (button.innerText === 'C') {
             button.onclick = clearDisplay; // Zuweisen der 'clearDisplay'-Funktion
         } else {
